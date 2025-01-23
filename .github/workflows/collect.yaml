@@ -31,6 +31,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug Environment Variables
+        run: |
+         echo "GIST_PAT is set: ${GIST_PAT:+yes}"
+         echo "GIST_LINK is set: ${GIST_LINK:+yes}"
+         echo "GIST_LINK value: $GIST_LINK"
       - name: Checkout
         uses: actions/checkout@v4
         with:
